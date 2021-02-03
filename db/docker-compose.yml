@@ -1,0 +1,33 @@
+# docker-compose for M153 DB db and config is saved in git-repo
+version: '3'
+services:
+  pgadmin:
+    container_name: db-postgres-admin
+    image: dpage/pgadmin4
+    restart: always
+    ports:
+      - "120:80"
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=lenoxy@gmx.ch
+      - PGADMIN_DEFAULT_PASSWORD=admin
+    networks:
+      - database
+    volumes:
+      - ./docker-data/db-postgres-admin-data:/var/lib/pgadmin
+
+  postgres:
+    container_name: db-postgres
+    image: postgres
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=db-postgres
+      - POSTGRES_USER=db-postgres
+    networks:
+      - database
+    volumes:
+      - ./docker-data/db-postgres-data:/var/lib/postgresql/data
+
+networks:
+  database:
