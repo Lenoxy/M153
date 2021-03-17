@@ -1,0 +1,6 @@
+(Lückentext eines SQL Statements)
+1.2.3 Normalform
+Joins
+Wieviele Datensätze gibt dieser Join
+CTE (Common Table expressions)
+50-60 Minuten
