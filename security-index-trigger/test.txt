@@ -1,0 +1,7 @@
+Security:
+- 10 Steps to securing ...
+
+Trigger: 
+- Schwergewicht
+Indexe: 
+- Schwergewicht
